@@ -124,7 +124,7 @@ in its system store.
 
 On the other hand, if you set up the Mender server yourself as described in
 [Production installation](../../07.Server-installation/04.Production-installation-with-kubernetes/docs.md) and generated certificates as part of it,
-your need to make sure that the server certificates are in `/etc/mender/server.crt` on your device.
+your need to make sure that the server certificates are in `/etc/mender/server.crt` on your device and the mender-client is configured to use it by setting [ServerCertificate](https://docs.mender.io/client-installation/configuration-file/configuration-options#servercertificate) in `/etc/mender/mender.conf`.
 
 To test that they match, run `cat /etc/mender/server.crt` on your device, and compare that to the output
 of the following command, adjusting the hostnames mender.example.com / s3.example.com (ideally run on device, but can be run from elsewhere as well):
